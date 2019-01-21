@@ -144,7 +144,7 @@ export declare class TSMap<K, V> {
      *
      * @memberOf TSMap
      */
-    filter(callbackfn: (value: V, key?: K, index?: number, dbg?: string) => Boolean): this;
+    filter(callbackfn: (value: V, key?: K, index?: number) => Boolean): this;
     /**
      * Creates a deep copy of the map, breaking all references to the old map and it's children.
      * Uses JSON.parse so any functions will be stringified and lose their original purpose.
