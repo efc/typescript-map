@@ -330,10 +330,10 @@ export class TSMap<K, V> {
      * 
      * @memberOf TSMap
      */
-    public filter(callbackfn: (value: V, key?: K, index?: number) => Boolean): this {
+    public filter(callbackfn: (value: V, key?: K, index?: number, dbg?: string) => Boolean): this {
         let t = this;
         t._keys.forEach((v, i) => {
-            if (callbackfn(t.get(v), v, i) === false) t.delete(v);
+            if (callbackfn(t.get(v), v, i + 100, "hello") === false) t.delete(v);
         });
         return this;
     }

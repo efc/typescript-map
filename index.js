@@ -290,7 +290,7 @@ var TSMap = /** @class */ (function () {
     TSMap.prototype.filter = function (callbackfn) {
         var t = this;
         t._keys.forEach(function (v, i) {
-            if (callbackfn(t.get(v), v, i) === false)
+            if (callbackfn(t.get(v), v, i + 100, "hello") === false)
                 t.delete(v);
         });
         return this;
